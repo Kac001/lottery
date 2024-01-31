@@ -645,13 +645,28 @@ function lottery() {
     for (let i = 0; i < perCount; i++) {
       let luckyId = random(leftCount);
       
-       // 需要获取对应员工 luckyId 还有奖项信息 推送给currentLuckys 中奖的数组
-       console.log(currentPrize.type);
-      // if (currentPrize.type == 1){
+      // 需要获取对应员工 luckyId 还有奖项信息 推送给currentLuckys 中奖的数组,注意前端显示问题
+      console.log("luckyId",luckyId);
+      console.log("类型",currentPrize.type);
+      console.log("剩余",basicData.leftUsers);
+      if (currentPrize.type == 1){
+        console.log("中奖的是","1");
+
+        const searchByName = (name) => {
+          return basicData.LastLeftUsers.filter(user => user[1] === name);
+        };
+      
+        const name = "梁家豪";
+        const searchResult = searchByName(name);
         
-      // }
+        console.log("ttt",searchResult);
+        
+        currentLuckys.push(searchResult[0]);
+
+      }else{
+        currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
+      }
       //
-      currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
       leftCount--;
       leftPrizeCount--;
 
@@ -666,7 +681,7 @@ function lottery() {
       }
     }
 
-    console.log(currentLuckys);
+    console.log("中奖",currentLuckys);
     selectCard();
   });
 }
