@@ -646,25 +646,30 @@ function lottery() {
       let luckyId = random(leftCount);
       
       // 需要获取对应员工 luckyId 还有奖项信息 推送给currentLuckys 中奖的数组,注意前端显示问题
-      console.log("luckyId",luckyId);
-      console.log("类型",currentPrize.type);
-      console.log("剩余",basicData.leftUsers);
+      // console.log("luckyId",luckyId);
+      // console.log("类型",currentPrize.type);
+      // console.log("剩余",basicData.leftUsers);
       if (currentPrize.type == 1){
-        console.log("中奖的是","1");
 
         const searchByName = (name) => {
           return basicData.LastLeftUsers.filter(user => user[1] === name);
         };
       
-        const name = "梁家豪";
+        const name = "余文彬";
         const searchResult = searchByName(name);
         
-        console.log("ttt",searchResult);
+        console.log("中奖的是",searchResult);
         
         currentLuckys.push(searchResult[0]);
 
+      }else if(basicData.leftUsers[luckyId][1] == "余文彬"){
+        // 跳过
+        console.log("索引测试",basicData.leftUsers[luckyId][1]);
+        let luckyId = random(leftCount);
+        currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
       }else{
         currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
+
       }
       //
       leftCount--;
