@@ -644,6 +644,13 @@ function lottery() {
 
     for (let i = 0; i < perCount; i++) {
       let luckyId = random(leftCount);
+      
+       // 需要获取对应员工 luckyId 还有奖项信息 推送给currentLuckys 中奖的数组
+       console.log(currentPrize.type);
+      // if (currentPrize.type == 1){
+        
+      // }
+      //
       currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
       leftCount--;
       leftPrizeCount--;
@@ -659,7 +666,7 @@ function lottery() {
       }
     }
 
-    // console.log(currentLuckys);
+    console.log(currentLuckys);
     selectCard();
   });
 }
