@@ -672,6 +672,8 @@ function lottery() {
 
       }
       //
+      // console.log("中奖号码",luckyId);
+      // console.log(basicData.leftUsers);
       leftCount--;
       leftPrizeCount--;
 

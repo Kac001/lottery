@@ -36,7 +36,7 @@ const prizes = [
   },
   {
     type: 4,
-    count: 2,
+    count: 3,
     text: "三等奖",
     title: "",
     img: "../img/secrit.jpg"
@@ -61,20 +61,13 @@ const prizes = [
     text: "六等奖",
     title: "",
     img: "../img/secrit.jpg"
-  },
-  {
-    type: 8,
-    count: 2,
-    text: "七等奖",
-    title: "",
-    img: "../img/secrit.jpg"
   }
 ];
 
 /**
  * 一次抽取的奖品个数与prizes对应
  */
-const EACH_COUNT = [1, 1, 1, 1, 1, 2, 2, 2, 2];
+const EACH_COUNT = [1, 1, 1, 1, 1, 1, 1, 1];
 
 /**
  * 卡片公司名称标识
