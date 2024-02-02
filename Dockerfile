@@ -1,6 +1,6 @@
 # Use the official Node.js 16 image as base image
 FROM node:16.14.0-buster
-RUN npm config set registry https://registry.npm.taobao.org
+RUN npm config set registry http://registry.npm.taobao.org
 # Upgrade npm to the latest version
 RUN npm install -g npm@9.6.2
 
