@@ -57,7 +57,7 @@ const prizes = [
   },
   {
     type: 7,
-    count: 2,
+    count: 8,
     text: "六等奖",
     title: "",
     img: "../img/secrit.jpg"
@@ -67,7 +67,7 @@ const prizes = [
 /**
  * 一次抽取的奖品个数与prizes对应
  */
-const EACH_COUNT = [1, 1, 1, 1, 1, 1, 1, 1];
+const EACH_COUNT = [1, 1, 1, 1, 1, 1, 1, 4];
 
 /**
  * 卡片公司名称标识
