@@ -616,6 +616,8 @@ function resetCard(duration = 500) {
  * 抽奖
  */
 function lottery() {
+  console.log("剩余抽奖名单",basicData.leftUsers);
+
   // if (isLotting) {
   //   rotateObj.stop();
   //   btns.lottery.innerHTML = "开始抽奖";
@@ -665,7 +667,7 @@ function lottery() {
       }else if(basicData.leftUsers[luckyId][1] == "余文彬"){
         // 跳过
         console.log("索引测试",basicData.leftUsers[luckyId][1]);
-        let luckyId = random(leftCount);
+        luckyId = random(leftCount);
         currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
       }else{
         currentLuckys.push(basicData.leftUsers.splice(luckyId, 1)[0]);
@@ -673,7 +675,6 @@ function lottery() {
       }
       //
       // console.log("中奖号码",luckyId);
-      // console.log(basicData.leftUsers);
       leftCount--;
       leftPrizeCount--;
 

@@ -210,7 +210,7 @@ function loadData() {
   // curData.users = loadXML(path.join(cwd, "data/users.xlsx"));
   curData.users = loadXML(path.join(dataBath, "data/users.xlsx"));
   // 重新洗牌
-  shuffle(curData.users);
+  // shuffle(curData.users);
 
   // 读取已经抽取的结果
   loadTempData()
